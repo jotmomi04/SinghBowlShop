@@ -20,9 +20,33 @@ namespace SinghBowlShop.Controllers
         }
 
         // GET: BowlMakers
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string bowlType, string searchString)
         {
-            return View(await _context.BowlMaker.ToListAsync());
+            // Use LINQ to get list of Types.
+            IQueryable<string> TypeQuery = from m in _context.BowlMaker
+                                           orderby m.Type
+                                           select m.Type;
+
+            var bowls = from m in _context.BowlMaker
+                        select m;
+
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                bowls = bowls.Where(s => s.Type.Contains(searchString));
+            }
+
+            if (!string.IsNullOrEmpty(bowlType))
+            {
+                bowls = bowls.Where(x => x.Type == bowlType);
+            }
+
+            var bowlTypeVM = new BowlTypeViewModel
+            {
+                Type = new SelectList(await TypeQuery.Distinct().ToListAsync()),
+                BowlMakers = await bowls.ToListAsync()
+            };
+
+            return View(bowlTypeVM);
         }
 
         // GET: BowlMakers/Details/5
