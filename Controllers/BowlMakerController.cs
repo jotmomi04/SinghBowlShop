@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SinghBowlShop.Controllers
 {
-    public class BowlMaker : Controller
+    public class BowlMakerController : Controller
     {
         public IActionResult Index()
         {

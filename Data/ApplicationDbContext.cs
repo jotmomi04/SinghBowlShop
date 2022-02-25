@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using SinghBowlShop.Models;
 
 namespace SinghBowlShop.Data
 {
@@ -12,5 +13,6 @@ namespace SinghBowlShop.Data
             : base(options)
         {
         }
+        public DbSet<SinghBowlShop.Models.BowlMaker> BowlMaker { get; set; }
     }
 }
