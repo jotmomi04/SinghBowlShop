@@ -78,7 +78,15 @@ Change the Index method In BowlMakersController
  4:24 AM 2/25/2022
  Check Validation
  Run Ok
- 
+ 11:18 Adding layout styles to web app 
+ cahnge color 
+ add comapny information
+ Run app :
+ Check all options ,Search option run perfect
+ Ready to submit
+ Makeing Github Public 
+ https://github.com/jotmomi04/SinghBowlShop.git
+ Submit to Blackboad
  
  
  
