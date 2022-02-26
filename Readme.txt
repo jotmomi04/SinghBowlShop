@@ -11,6 +11,15 @@ Assume Properties For Bowls
 3-Color
 4-Price
 5-Rating
+WE ARE following the MVC tutorial Steps to Complete Our MvC app 
+Step 1 . Select Web → ASP.NET MVC Web Application and name this project as FirstMVCApplicatio. Select the Location as...
+Step 2 . Select Empty template and View Engine as Razor. ... Now, Visual Studio will create our first MVC project as...
+Step 3 . Controllers are just simple C
+classes, which contains multiple public methods, known as action methods.
+Step 4 . To add a new View, rightclick view folder and click Add → View.
+Step 5. Add model and scoldfying it
+Step 6 Add serch BAr
+Setp 7 validation data
 Begin Application 
 Create App for Bowl Shop and push to Git hub
 1.47 25-02-2022 
